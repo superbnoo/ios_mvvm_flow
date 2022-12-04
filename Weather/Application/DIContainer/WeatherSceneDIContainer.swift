@@ -16,42 +16,10 @@ final class WeatherSceneDIContainer: WeatherSearchFlowCoordinatorDependencies {
     }
     
     private let dependencies: Dependencies
-
-    // MARK: - Persistent Storage
-//    lazy var WeatherQueriesStorage: WeatherQueriesStorage = CoreDataStorage(maxStorageLimit: 10)
     
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
     }
-    
-    // MARK: - Use Cases
-//    func makeSearchWeatherUseCase() -> SearchWeatherUseCase {
-//        return DefaultSearchWeatherUseCase(moviesRepository: makeWeatherRepository(),
-//                                          moviesQueriesRepository: makeWeatherQueriesRepository())
-//    }
-    
-//    func makeFetchWeatherRecentQueriesUseCase() -> FetchWeatherRecentQueriesUseCase {
-//        return DefaultFetchWeatherRecentQueriesUseCase(moviesQueriesRepository: makeWeatherQueriesRepository())
-//    }
-    
-    // MARK: - Data Sources
-//    func makeWeatherRepository() -> WeatherRepository {
-//        return DefaultWeatherRepository(dataTransferService: dependencies.apiDataTransferService)
-//    }
-//    func makeWeatherQueriesRepository() -> WeatherQueriesRepository {
-//        return DefaultWeatherQueriesRepository(dataTransferService: dependencies.apiDataTransferService,
-//                                              moviesQueriesPersistentStorage: moviesQueriesStorage)
-//    }
-//    func makePosterImagesRepository() -> PosterImagesRepository {
-//        return DefaultPosterImagesRepository(dataTransferService: dependencies.imageDataTransferService,
-//                                             imageNotFoundData: UIImage(named: "image_not_found")?.pngData())
-//    }
-    
-    
-//    func makeWeatherListViewModel() -> WeatherListViewModel {
-//        return WeatherListViewModel(searchWeatherUseCase: makeSearchWeatherUseCase(),
-//                                   posterImagesRepository: makePosterImagesRepository())
-//    }
     
     // MARK: - Weather List
     func makeWeatherListViewController(actions: WeatherListViewModelActions) -> WeatherListViewController {
