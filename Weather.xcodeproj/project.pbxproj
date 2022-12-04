@@ -33,6 +33,10 @@
 		7F295340293C4E310060D9E7 /* DataTransferError+ConnectError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F29533F293C4E310060D9E7 /* DataTransferError+ConnectError.swift */; };
 		7F295343293C4F630060D9E7 /* ConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F295342293C4F630060D9E7 /* ConnectionError.swift */; };
 		7F295347293CA3610060D9E7 /* SubtitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F295346293CA3610060D9E7 /* SubtitleTableViewCell.swift */; };
+		7FD56B94293CB47400C74CD3 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD56B93293CB47400C74CD3 /* NetworkService.swift */; };
+		7FD56B96293CB48200C74CD3 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD56B95293CB48200C74CD3 /* Endpoint.swift */; };
+		7FD56B98293CB49400C74CD3 /* NetworkConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD56B97293CB49400C74CD3 /* NetworkConfig.swift */; };
+		7FD56B9A293CB59200C74CD3 /* DataTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FD56B99293CB59200C74CD3 /* DataTransferService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +87,10 @@
 		7F29533F293C4E310060D9E7 /* DataTransferError+ConnectError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataTransferError+ConnectError.swift"; sourceTree = "<group>"; };
 		7F295342293C4F630060D9E7 /* ConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionError.swift; sourceTree = "<group>"; };
 		7F295346293CA3610060D9E7 /* SubtitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtitleTableViewCell.swift; sourceTree = "<group>"; };
+		7FD56B93293CB47400C74CD3 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7FD56B95293CB48200C74CD3 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		7FD56B97293CB49400C74CD3 /* NetworkConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConfig.swift; sourceTree = "<group>"; };
+		7FD56B99293CB59200C74CD3 /* DataTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataTransferService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +144,7 @@
 				7F295302293B32700060D9E7 /* Application */,
 				7F295335293C493C0060D9E7 /* Domain */,
 				7F29531B293B52070060D9E7 /* Components */,
+				7FD56B8F293CB42600C74CD3 /* Infrastructure */,
 				7F295323293B53840060D9E7 /* Presentation */,
 				7F29530C293B358A0060D9E7 /* Common */,
 				7F2952D8293B323F0060D9E7 /* Main.storyboard */,
@@ -306,6 +315,25 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		7FD56B8F293CB42600C74CD3 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				7FD56B90293CB43C00C74CD3 /* Network */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		7FD56B90293CB43C00C74CD3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				7FD56B93293CB47400C74CD3 /* NetworkService.swift */,
+				7FD56B95293CB48200C74CD3 /* Endpoint.swift */,
+				7FD56B97293CB49400C74CD3 /* NetworkConfig.swift */,
+				7FD56B99293CB59200C74CD3 /* DataTransferService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -437,6 +465,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD56B94293CB47400C74CD3 /* NetworkService.swift in Sources */,
 				7F295334293BB5F00060D9E7 /* Observable.swift in Sources */,
 				7F295326293B53A60060D9E7 /* WeatherListViewController.swift in Sources */,
 				7F295338293C495D0060D9E7 /* Weather.swift in Sources */,
@@ -448,10 +477,13 @@
 				7F29531F293B52650060D9E7 /* UIFactory.swift in Sources */,
 				7F295322293B52AD0060D9E7 /* UIColor+Ext.swift in Sources */,
 				7F295331293BB5100060D9E7 /* WeatherListViewModel.swift in Sources */,
+				7FD56B9A293CB59200C74CD3 /* DataTransferService.swift in Sources */,
 				7F29533E293C4D410060D9E7 /* WeatherQuery.swift in Sources */,
+				7FD56B98293CB49400C74CD3 /* NetworkConfig.swift in Sources */,
 				7F29532B293BB0B50060D9E7 /* AppFlowCoordinator.swift in Sources */,
 				7F29532F293BB41C0060D9E7 /* WeatherSearchFlowCoordinator.swift in Sources */,
 				7F295329293BACF90060D9E7 /* WeatherDetailViewController.swift in Sources */,
+				7FD56B96293CB48200C74CD3 /* Endpoint.swift in Sources */,
 				7F295305293B32D90060D9E7 /* AppDIContainer.swift in Sources */,
 				7F295309293B337F0060D9E7 /* AppAppearance.swift in Sources */,
 				7F295347293CA3610060D9E7 /* SubtitleTableViewCell.swift in Sources */,
