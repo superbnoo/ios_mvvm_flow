@@ -2,7 +2,7 @@
 
 #### MVVM iOS app
 
-- [x] MVVM
+- [x] MVVM - View Model + dumb view controller
 - [x] App Flow
 - [x] Dependency injection
 - [x] Combine and observable data (similar to Android LiveData)
