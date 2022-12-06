@@ -6,4 +6,4 @@
 - [x] App Flow
 - [x] Dependency injection
 - [x] Combine and observable data (similar to Android LiveData)
-- [ ] Unit tests - in progress
+- [x] Unit tests - simple test for flow and view model

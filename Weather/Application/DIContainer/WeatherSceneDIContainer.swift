@@ -22,7 +22,7 @@ final class WeatherSceneDIContainer: WeatherSearchFlowCoordinatorDependencies {
     }
     
     // MARK: - Weather List
-    func makeWeatherListViewController(actions: WeatherListViewModelActions) -> WeatherListViewController {
+    func makeWeatherListViewController(actions: WeatherListViewModelActions) -> UIViewController {
         return WeatherListViewController.create(with: makeWeatherListViewModel(actions: actions))
     }
     

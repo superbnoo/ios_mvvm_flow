@@ -8,7 +8,7 @@
 import UIKit
 
 protocol WeatherSearchFlowCoordinatorDependencies  {
-    func makeWeatherListViewController(actions: WeatherListViewModelActions) -> WeatherListViewController
+    func makeWeatherListViewController(actions: WeatherListViewModelActions) -> UIViewController
     func makeWeatherDetailViewController(weather: WeatherListItemViewModel) -> UIViewController
 }
 

@@ -18,11 +18,11 @@ final class WeatherListItemViewModelTests: XCTestCase {
     }
     
     func testInitReturnInstanceCorrectly() throws {
-        let weather = Weather.stub(temperature: "28°C", weather: "sunny")
+        let weather = Weather.stub(city: "New York",temperature: "28°C", weather: "sunny")
         let viewModel = WeatherListItemViewModel(weather: weather)
         XCTAssertEqual("sunny", viewModel.weather)
         XCTAssertEqual("28°C", viewModel.temperature)
-        XCTAssertEqual("28°C", viewModel.title)
+        XCTAssertEqual("New York", viewModel.title)
     }
 
     func testDetailWeatherShouldFormatTextCorrectly() throws {
