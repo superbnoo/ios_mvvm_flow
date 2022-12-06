@@ -12,12 +12,15 @@ protocol WeatherSearchFlowCoordinatorDependencies  {
     func makeWeatherDetailViewController(weather: WeatherListItemViewModel) -> UIViewController
 }
 
-final class WeatherSearchFlowCoordinator {
+protocol WeatherFlowCoordinator {
+    func start()
+    func showWeatherDetails(weather: WeatherListItemViewModel)
+}
+
+final class WeatherSearchFlowCoordinator: WeatherFlowCoordinator {
     
     private weak var navigationController: UINavigationController?
     private let dependencies: WeatherSearchFlowCoordinatorDependencies
-
-    private weak var weatherListVC: WeatherListViewController?
 
     init(navigationController: UINavigationController,
          dependencies: WeatherSearchFlowCoordinatorDependencies) {
@@ -33,10 +36,9 @@ final class WeatherSearchFlowCoordinator {
         let vc = dependencies.makeWeatherListViewController(actions: actions)
 
         navigationController?.pushViewController(vc, animated: false)
-        weatherListVC = vc
     }
 
-    private func showWeatherDetails(weather: WeatherListItemViewModel) {
+    func showWeatherDetails(weather: WeatherListItemViewModel) {
         let vc = dependencies.makeWeatherDetailViewController(weather: weather)
         navigationController?.pushViewController(vc, animated: true)
     }

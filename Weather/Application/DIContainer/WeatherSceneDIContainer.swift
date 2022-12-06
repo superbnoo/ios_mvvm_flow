@@ -26,7 +26,7 @@ final class WeatherSceneDIContainer: WeatherSearchFlowCoordinatorDependencies {
         return WeatherListViewController.create(with: makeWeatherListViewModel(actions: actions))
     }
     
-    func makeWeatherListViewModel(actions: WeatherListViewModelActions) -> WeatherListViewModel {
+    private func makeWeatherListViewModel(actions: WeatherListViewModelActions) -> WeatherListViewModel {
         return DefaultWeatherListViewModel(actions: actions)
     }
     
@@ -37,7 +37,7 @@ final class WeatherSceneDIContainer: WeatherSearchFlowCoordinatorDependencies {
     }
     
     // MARK: - Flow Coordinators
-    func makeWeatherSearchFlowCoordinator(navigationController: UINavigationController) -> WeatherSearchFlowCoordinator {
+    func makeWeatherSearchFlowCoordinator(navigationController: UINavigationController) -> WeatherFlowCoordinator {
         return WeatherSearchFlowCoordinator(
             navigationController: navigationController,
             dependencies: self

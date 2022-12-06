@@ -26,7 +26,6 @@ protocol WeatherListViewModel: WeatherListViewModelInput, WeatherListViewModelOu
 final class DefaultWeatherListViewModel: WeatherListViewModel {
     
     private let actions: WeatherListViewModelActions?
-    private var moviesLoadTask: Cancellable? { willSet { moviesLoadTask?.cancel() } }
     private var weatherLoadTask: AnyCancellable?
 
     // MARK: - OUTPUT
@@ -39,6 +38,7 @@ final class DefaultWeatherListViewModel: WeatherListViewModel {
         self.actions = actions
     }
     
+    // MARK: - INPUT
     func loadWeathers(url: URL?) {
         weatherLoadTask = fetchWeathers(url: url)
             .receive(on: DispatchQueue.main)
